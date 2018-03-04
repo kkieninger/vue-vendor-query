@@ -5,6 +5,11 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import { TableComponent, TableColumn } from 'vue-table-component'
+
+Vue.component('table-component', TableComponent)
+Vue.component('table-column', TableColumn)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
