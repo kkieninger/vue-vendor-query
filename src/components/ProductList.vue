@@ -22,7 +22,8 @@ export default {
   name: 'ProductList',
   computed: {
     products () {
-      return this.$store.state.products
+      // limits first 10 products within array
+      return this.$store.state.products.slice(0, 10)
     }
   },
   // fire load projects action in store
