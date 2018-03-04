@@ -1,15 +1,22 @@
 <template>
-  <div class="product-list">
-    <h2>Product List</h2>
+  <section class="product-list">
+    <div class="list-header">
+      <h2>Product List</h2>
+    </div>
     <div v-if="products.length">
       <table-component :data="products"
         sort-by="clientId"
         sort-order="asc"
       >
+        <table-column show="product" label="Product"></table-column>
         <table-column show="clientId" label="Client ID" data-type="numeric"></table-column>
         <table-column show="id" label="ID" data-type="numeric"></table-column>
-        <table-column show="product" label="Product"></table-column>
         <table-column show="description" label="Description"></table-column>
+        <table-column label="" :sortable="false" :filterable="false">
+          <template slot-scope="row">
+            <router-link :to="`/product/${row.product}?id=${row.id}&clientId=${row.clientId}&product=${row.product}&description=${row.description}`">More Details</router-link>
+          </template>
+        </table-column>
       </table-component>
     </div>
     <div v-else>
@@ -29,7 +36,7 @@
         </svg>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -37,8 +44,7 @@ export default {
   name: 'ProductList',
   computed: {
     products () {
-      // limits first 10 products within array
-      return this.$store.state.products.slice(0, 10)
+      return this.$store.getters.trimProducts;
     }
   },
   // fire load projects action in store
@@ -49,6 +55,10 @@ export default {
 </script>
 
 <style>
+.list-header {
+  padding: 0 1rem;
+}
+
 /* LOADER COLOR */
 svg path,
 svg rect{

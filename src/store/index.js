@@ -17,10 +17,19 @@ const store = new Vuex.Store({
       })
     }
   },
-  // The mutations calls are the only place that the store can be updated.
   mutations: {
     SET_PRODUCTS: (state, { list }) => {
       state.products = list
+    }
+  },
+  getters: {
+    // get entire list of products
+    getProducts: state => {
+      return state.products
+    },
+    // get a trimmed list of only 10 products
+    trimProducts: state => {
+      return state.products.slice(0, 10)
     }
   }
 })
