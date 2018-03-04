@@ -31,7 +31,6 @@
 </template>
 
 <script>
-  // console.log(this.$route.params.id);
   export default {
     name: 'ProductDetail',
     data() {
@@ -51,11 +50,9 @@
     methods: {
       doesExist: function(){
         for(var i=0; i < this.$store.getters.trimProducts.length; i++){
-          console.log(this.$route.params.id);
           if( this.$store.getters.trimProducts[i].product == this.$route.params.id){
             this.matchedProduct = true
             return
-            // console.log('true');
           } else {
             this.matchedProduct = false;
             console.log('false');
