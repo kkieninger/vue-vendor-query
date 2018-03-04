@@ -18,7 +18,7 @@ The data you display can be hard-coded for the purposes of this exercise. No dat
 
 ## Project Solution
 
-This is a simple Vue application built using the Vue CLI, Vuex, Axios and a component from NPM, vue-table-component. First I started by creating the application and setting up a Vuex store, which in turn calls to a JSON object, using Axios. From there, a list of fictional products are displayed within a sortable table format. Each individual product also includes a product detail page, in which data is passed via route query parameters in the link's URL structure.
+This is a simple Vue application built using the Vue CLI, Vuex, Axios and a component from NPM, vue-table-component. First I started by creating the application and setting up a Vuex store, which in turn calls to a JSON object (https://next.json-generator.com/41RBhbHu4), using Axios. From there, a list of fictional products are displayed within a sortable table format. Each individual product also includes a product detail page, in which data is passed via route query parameters in the link's URL structure.
 
 ## Build Setup
 
