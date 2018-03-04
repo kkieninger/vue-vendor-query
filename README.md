@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+Demo link: http://innate-feather.surge.sh/#/
+
 ## Project Instructions
 
 Below is the problem we would like you to solve. We expect you to spend no more than 4 total hours on this exercise. Regardless of how complete your solution is, please stop once you reach the 4 hour mark. We do not expect a world-class or highly complex implementation.
