@@ -8,9 +8,9 @@ Below is the problem we would like you to solve. We expect you to spend no more 
 
 Assume that you are an advertising vendor and want to display a list of interest rate information on a particular client products. Using JavaScript, create a small web application that will do the following:
 
-	1.	Query a REST API that will return data for you to display. Display no more than four columns and 10 records at a time. You will need to create all of the code necessary to render the view and query the API. You may use an open source test api, such as https://jsonplaceholder.typicode.com/ or create one yourself locally. 
-	2.	Once the data is displayed, you must add the ability to sort by any of the displayed columns and navigate back and forth with at least one more page of data. Each record displayed must also contain a link to another page and include a reference to that record in the link’s query string. If there was an error retrieving the data, display a message to the user.
-	3.	Optional - Add git source control to your project and submit it to a public (or private) github repository which can be accessed by Bankrate. Please ensure your repository contains a readme which briefly describes your application and how it works.
+1. Query a REST API that will return data for you to display. Display no more than four columns and 10 records at a time. You will need to create all of the code necessary to render the view and query the API. You may use an open source test api, such as https://jsonplaceholder.typicode.com/ or create one yourself locally. 
+2. Once the data is displayed, you must add the ability to sort by any of the displayed columns and navigate back and forth with at least one more page of data. Each record displayed must also contain a link to another page and include a reference to that record in the link’s query string. If there was an error retrieving the data, display a message to the user.
+3. Optional - Add git source control to your project and submit it to a public (or private) github repository which can be accessed by Bankrate. Please ensure your repository contains a readme which briefly describes your application and how it works.
 
 Keep in mind that this web application will be publicly accessible. You will need to take the necessary security precautions to prevent unwanted attacks.
 
