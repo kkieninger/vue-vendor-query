@@ -44,7 +44,7 @@ export default {
   name: 'ProductList',
   computed: {
     products () {
-      return this.$store.getters.trimProducts;
+      return this.$store.getters.trimProducts
     }
   },
   // fire load projects action in store

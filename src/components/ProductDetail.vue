@@ -26,45 +26,45 @@
           <h2>We're sorry. The product you entered is invalid. Please try again.</h2>
         </div>
       </div>
-      
+
   </section>
 </template>
 
 <script>
-  export default {
-    name: 'ProductDetail',
-    data() {
-      return {
-        matchedProduct: true
-      }
-    },
-    created() {
-      this.doesExist()
-      console.log('started')
-    },
-    computed: {
-      products () {
-        return this.$store.getters.trimProducts;
-      }
-    },
-    methods: {
-      doesExist: function(){
-        for(var i=0; i < this.$store.getters.trimProducts.length; i++){
-          if( this.$store.getters.trimProducts[i].product == this.$route.params.id){
-            this.matchedProduct = true
-            return
-          } else {
-            this.matchedProduct = false;
-            console.log('false');
-          }
+export default {
+  name: 'ProductDetail',
+  data () {
+    return {
+      matchedProduct: true
+    }
+  },
+  created () {
+    this.doesExist()
+    console.log('started')
+  },
+  computed: {
+    products () {
+      return this.$store.getters.trimProducts
+    }
+  },
+  methods: {
+    doesExist: function () {
+      for (var i = 0; i < this.$store.getters.trimProducts.length; i++) {
+        if (this.$store.getters.trimProducts[i].product === this.$route.params.id) {
+          this.matchedProduct = true
+          return
+        } else {
+          this.matchedProduct = false
+          console.log('false')
         }
       }
-    },
-    // fire load projects action in store
-    mounted: function () {
-      this.$store.dispatch('LOAD_PRODUCTS')
     }
-  }  
+  },
+  // fire load projects action in store
+  mounted: function () {
+    this.$store.dispatch('LOAD_PRODUCTS')
+  }
+}
 </script>
 
 <style scoped>
